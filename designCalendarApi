@@ -1,0 +1,68 @@
+Operations:
+  1. fetch meeting schedule
+  2. Create meeting
+    a. Add Guests
+  3. Update meeting
+  4. Cancel meeting
+
+
+RequestResponse
+
+    Create
+    Notes:
+meetingId 0 will define a new meeting
+
+    Request:
+      {
+      meetingId:0
+      tStart:
+      tEnd:
+      locationId:
+      locationDesc:
+      guests:
+          {
+          required:[],
+          optional:[]
+          }
+      }
+
+      Response:
+      HTTP 200 OK --> success
+      HTTP 4**, 5** --> failure
+
+
+      Update
+Notes:
+same are create with a non 0 meeting id.
+      Request:
+      {
+      meetingId:181988
+      tStart:
+      tEnd:
+      locationId:
+      locationDesc:
+      guests:
+          {
+          required:[],
+          optional:[]
+          }
+      }
+
+      Response:
+      HTTP 200 OK --> success
+      HTTP 4**, 5** --> failure
+
+
+      Cancel / Delete
+
+      Request
+      {
+      meetingId:181988
+      }
+
+      Response:
+      HTTP 200 OK --> success
+      HTTP 4**, 5** --> failure
+
+
+Data Diagram:

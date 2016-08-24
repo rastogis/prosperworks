@@ -3,7 +3,9 @@
 */
 
 'use strict';
-
+/*
+* O(Log(N))
+*/
 function iterativeBinarySearch(a, arr) {
     var min = 0;
     var max = arr.length - 1;
@@ -28,7 +30,9 @@ function iterativeBinarySearch(a, arr) {
 
     return false;
 }
-
+/*
+* O(Log(N))
+*/
 function recursiveBinarySearch(a, arr, min, max) {
   if(!min) min=0;
   if(!max) max = arr.length-1;
